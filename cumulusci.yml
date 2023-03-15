@@ -1,0 +1,21 @@
+minimum_cumulusci_version: '3.71.0'
+project:
+    name: test-framework-demo
+    package:
+        name: test-framework-demo
+        api_version: '55.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/test-framework-demo/tests
+            options:
+                outputdir: robot/test-framework-demo/results
+
+    robot_testdoc:
+        options:
+            path: robot/test-framework-demo/tests
+            output: robot/test-framework-demo/doc/test-framework-demo_tests.html
+
